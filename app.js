@@ -45,5 +45,6 @@ wss.on("connection", (ws, req) => {
 
     ws.on("close", () => {
         console.log("Client disconnected")
+        clients.delete(ws)
     })
 })
